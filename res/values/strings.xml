@@ -3,4 +3,13 @@
 
     <string name="app_name">RecipeBook</string>
     
+    <string name="label_info">Information</string>
+    
+	<string name="snacks">Snacks</string>
+	<string name="salads">Salads</string>
+	<string name="first">First courses</string>
+	<string name="second">Second courses</string>
+	<string name="desserts">Desserts</string>
+	<string name="beverages">Beverages</string>
+    
 </resources>

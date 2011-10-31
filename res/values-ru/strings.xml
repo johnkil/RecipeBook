@@ -3,4 +3,13 @@
 
     <string name="app_name">Книга рецептов</string>
     
+	<string name="label_info">Информация</string>
+    
+	<string name="snacks">Закуски</string>
+	<string name="salads">Салаты</string>
+	<string name="first">Первые блюда</string>
+	<string name="second">Вторые блюда</string>
+	<string name="desserts">Десерты</string>
+	<string name="beverages">Напитки</string>
+    
 </resources>

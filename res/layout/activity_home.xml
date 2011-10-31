@@ -26,28 +26,40 @@
         
         <Button android:id="@+id/home_btn_new_message"
             style="@style/DashboardButton"
-            android:text="Закуски"
-            android:drawableTop="@drawable/sandwich" />
+            android:text="@string/snacks"
+            android:drawableTop="@drawable/sandwich"
+            android:tag="0"
+            android:onClick="onSelectCategory" />
         <Button android:id="@+id/home_btn_messages"
             style="@style/DashboardButton"
-            android:text="Салаты"
-            android:drawableTop="@drawable/salad" />
+            android:text="@string/salads"
+            android:drawableTop="@drawable/salad"
+            android:tag="1"
+            android:onClick="onSelectCategory" />
         <Button android:id="@+id/home_btn_preferences"
             style="@style/DashboardButton"
-            android:text="Первые блюда"
-            android:drawableTop="@drawable/chicken_soup" />
+            android:text="@string/first"
+            android:drawableTop="@drawable/chicken_soup"
+            android:tag="2"
+            android:onClick="onSelectCategory" />
         <Button android:id="@+id/home_btn_full_version"
             style="@style/DashboardButton"
-            android:text="Вторые блюда"
-            android:drawableTop="@drawable/steak" />
+            android:text="@string/second"
+            android:drawableTop="@drawable/steak"
+            android:tag="3"
+            android:onClick="onSelectCategory" />
         <Button android:id="@+id/home_btn_preferences"
             style="@style/DashboardButton"
-            android:text="Десерты"
-            android:drawableTop="@drawable/cake" />
+            android:text="@string/desserts"
+            android:drawableTop="@drawable/cake"
+            android:tag="4"
+            android:onClick="onSelectCategory" />
         <Button android:id="@+id/home_btn_full_version"
             style="@style/DashboardButton"
-            android:text="Напитки"
-            android:drawableTop="@drawable/cocktail" />
+            android:text="@string/beverages"
+            android:drawableTop="@drawable/cocktail"
+            android:tag="5"
+            android:onClick="onSelectCategory" />
     </com.devspark.recipebook.layouts.DashboardLayout>
 
 </LinearLayout>

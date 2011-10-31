@@ -19,10 +19,15 @@ package com.devspark.recipebook.ui;
 import com.devspark.recipebook.R;
 
 import greendroid.app.GDActivity;
+import greendroid.graphics.drawable.ActionBarDrawable;
+import greendroid.widget.ActionBarItem;
+import greendroid.widget.NormalActionBarItem;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Window;
+import android.util.Log;
+import android.view.View;
 
 /**
  * Front-door {@link Activity} that displays high-level features the schedule application offers to
@@ -36,10 +41,33 @@ public class HomeActivity extends GDActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+    	Log.v(LOG_TAG, "onCreate() called");
+		super.onCreate(savedInstanceState);
 
         setActionBarContentView(R.layout.activity_home);
+        addActionBarItem(getActionBar()
+                .newActionBarItem(NormalActionBarItem.class)
+                .setDrawable(new ActionBarDrawable(this, R.drawable.ic_action_bar_info)), R.id.action_bar_info);
+    }
+    
+    public void onSelectCategory(View v) {
+    	int category = Integer.parseInt((String) v.getTag());
+    	Log.v(LOG_TAG, String.format("onSelectCategory() called: category=[%d]", category));
+    	Intent intent = new Intent(HomeActivity.this, CategoryActivity.class);
+    	intent.putExtra(CategoryActivity.EXT_CATEGORY, category);
+    	startActivity(intent);
+    }
+    
+    @Override
+    public boolean onHandleActionBarItemClick(ActionBarItem item, int position) {
+        switch (item.getItemId()) {
+            case R.id.action_bar_info:
+                startActivity(new Intent(this, InfoActivity.class));
+                return true;
+
+            default:
+                return super.onHandleActionBarItemClick(item, position);
+        }
     }
     
 }
