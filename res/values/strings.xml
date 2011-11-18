@@ -4,6 +4,7 @@
     <string name="app_name">RecipeBook</string>
     
     <string name="label_info">Information</string>
+    <string name="version_format">Version %s</string>
     
 	<string name="snacks">Snacks</string>
 	<string name="salads">Salads</string>
@@ -12,4 +13,6 @@
 	<string name="desserts">Desserts</string>
 	<string name="beverages">Beverages</string>
     
+	<string name="favorite">Favorite</string>
+	    
 </resources>

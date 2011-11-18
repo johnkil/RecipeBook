@@ -19,9 +19,8 @@ package com.devspark.recipebook.ui;
 import com.devspark.recipebook.R;
 
 import greendroid.app.GDActivity;
-import greendroid.graphics.drawable.ActionBarDrawable;
 import greendroid.widget.ActionBarItem;
-import greendroid.widget.NormalActionBarItem;
+import greendroid.widget.ActionBarItem.Type;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -45,16 +44,16 @@ public class HomeActivity extends GDActivity {
 		super.onCreate(savedInstanceState);
 
         setActionBarContentView(R.layout.activity_home);
-        addActionBarItem(getActionBar()
-                .newActionBarItem(NormalActionBarItem.class)
-                .setDrawable(new ActionBarDrawable(this, R.drawable.ic_action_bar_info)), R.id.action_bar_info);
+        addActionBarItem(Type.Search, R.id.action_bar_search);
+        addActionBarItem(Type.Star, R.id.action_bar_favorite);
+        addActionBarItem(Type.Info, R.id.action_bar_info);
     }
     
     public void onSelectCategory(View v) {
     	int category = Integer.parseInt((String) v.getTag());
     	Log.v(LOG_TAG, String.format("onSelectCategory() called: category=[%d]", category));
-    	Intent intent = new Intent(HomeActivity.this, CategoryActivity.class);
-    	intent.putExtra(CategoryActivity.EXT_CATEGORY, category);
+    	Intent intent = new Intent(HomeActivity.this, CategoryGridActivity.class);
+    	intent.putExtra(CategoryGridActivity.EXT_CATEGORY, category);
     	startActivity(intent);
     }
     

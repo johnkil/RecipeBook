@@ -20,5 +20,9 @@
 <resources>
 
 	<item type="id" name="action_bar_info" />
+	<item type="id" name="action_bar_search" />
+	<item type="id" name="action_bar_favorite" />
+	<item type="id" name="action_bar_list" />
+	<item type="id" name="action_bar_gallery" />
 
 </resources>

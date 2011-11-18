@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.devspark.recipebook"
-    android:versionCode="1"
+    android:versionCode="2"
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="4" />
@@ -13,16 +13,19 @@
         android:theme="@style/Theme.RecipeBook" >
         <activity
             android:label="@string/app_name"
+            android:launchMode="singleTop"
             android:name=".ui.HomeActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.CategoryGridActivity" />
+        <activity android:name=".ui.CategoryListActivity" />
+        <activity android:name=".ui.RecipeActivity" />
         <activity
-            android:name=".ui.InfoActivity"
-            android:label="@string/label_info" />
-        <activity android:name=".ui.CategoryActivity" />
+            android:label="@string/label_info"
+            android:name=".ui.InfoActivity" />
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@
 
 <resources>
 
-	<style name="Theme.RecipeBook" parent="@style/Theme.GreenDroid.NoTitleBar">
+	<style name="Theme.RecipeBook" parent="@style/Theme.GreenDroid.Light.NoTitleBar">
 	
 		<item name="gdActionBarTitleColor">@android:color/white</item>
 		<item name="gdActionBarBackground">@drawable/action_bar_background</item>
